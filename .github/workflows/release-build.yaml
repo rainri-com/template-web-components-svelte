@@ -28,7 +28,5 @@ jobs:
         id: package-version
         uses: martinbeentjes/npm-get-version-action@master
       - uses: release-drafter/release-drafter@v5
-        with:
-          name-template: ''
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

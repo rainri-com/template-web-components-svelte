@@ -1,4 +1,3 @@
-name-template: 'v$NEXT_PATCH_VERSION'
-tag-template: 'v$NEXT_PATCH_VERSION'
-change-template: '- $TITLE @$AUTHOR (#$NUMBER)'
-template: install for https://www.npmjs.com/package/template-web-components-svelte
+name-template: '$TITLE'
+tag-template: '$TITLE'
+template: install the https://www.npmjs.com/package/template-web-components-svelte
