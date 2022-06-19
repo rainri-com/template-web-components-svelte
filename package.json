@@ -2,6 +2,13 @@
   "name": "template-web-components-svelte",
   "version": "0.0.1",
   "type": "module",
+  "main": "dist/web-components-svelte.umd.js",
+  "module": "dist/web-components-svelte.es.js",
+  "unpkg": "dist/web-components-svelte.umd.js",
+  "files": [
+    "dist"
+  ],
+  "license": "MIT",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

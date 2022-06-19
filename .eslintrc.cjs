@@ -30,4 +30,9 @@ module.exports = {
   settings: {
     'svelte3/typescript': () => require('typescript'),
   },
+  settings: {
+    'svelte3/compiler-options': {
+      customElement: true,
+    },
+  },
 }
