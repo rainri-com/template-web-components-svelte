@@ -1,6 +1,7 @@
 {
-  "name": "template-web-components-svelte",
+  "name": "@rainri-com/template-web-components-svelte",
   "version": "0.0.1",
+  "author": "rainri-com",
   "type": "module",
   "main": "dist/template-web-components-svelte.umd.js",
   "module": "dist/template-web-components-svelte.es.js",
@@ -9,6 +10,16 @@
     "dist"
   ],
   "license": "MIT",
+  "homepage": "https://github.com/rainri-com/template-web-components-svelte",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rainri-com/template-web-components-svelte"
+  },
+  "keywords": [
+    "svelte",
+    "web-component",
+    "template"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "vite build",
