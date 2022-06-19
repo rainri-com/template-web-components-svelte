@@ -2,9 +2,9 @@
   "name": "template-web-components-svelte",
   "version": "0.0.1",
   "type": "module",
-  "main": "dist/web-components-svelte.umd.js",
-  "module": "dist/web-components-svelte.es.js",
-  "unpkg": "dist/web-components-svelte.umd.js",
+  "main": "dist/template-web-components-svelte.umd.js",
+  "module": "dist/template-web-components-svelte.es.js",
+  "unpkg": "dist/template-web-components-svelte.umd.js",
   "files": [
     "dist"
   ],

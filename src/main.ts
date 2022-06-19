@@ -1,1 +1,1 @@
-export * from './WebComponentsSvelte.svelte'
+export * from './TemplateWebComponentsSvelte.svelte'

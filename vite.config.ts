@@ -6,8 +6,8 @@ export default defineConfig({
   build: {
     lib: {
       entry: './src/main.ts',
-      name: 'WebComponentsSvelte',
-      fileName: (format) => `web-components-svelte.${format}.js`,
+      name: 'TemplateWebComponentsSvelte',
+      fileName: (format) => `template-web-components-svelte.${format}.js`,
     },
   },
   plugins: [

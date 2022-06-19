@@ -1,0 +1,26 @@
+name: 'Publish Build'
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  publish-svelte:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: setup node
+        uses: actions/setup-node@v1
+        with:
+          node-version: 16
+      - name: install app dependencies and build it
+        run: yarn && yarn build
+      - uses: JS-DevTools/npm-publish@v1
+        id: publish
+        with:
+          token: ${{ secrets.NPM_ACCESS_TOKEN }}
+          access: 'public'
+          greater-version-only: true
+      - if: steps.publish.outputs.type != 'none'
+        run: |
+          echo "Version changed: ${{ steps.publish.outputs.old-version }} => ${{ steps.publish.outputs.version }}"
