@@ -1,7 +1,6 @@
 {
-  "name": "@rainri-com/template-web-components-svelte",
+  "name": "template-web-components-svelte",
   "version": "0.0.1",
-  "author": "rainri-com",
   "type": "module",
   "main": "dist/template-web-components-svelte.umd.js",
   "module": "dist/template-web-components-svelte.es.js",
