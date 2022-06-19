@@ -5,28 +5,29 @@ module.exports = {
     node: true,
   },
   extends: [
-    "airbnb-base",
-    "airbnb-typescript/base",
-    "plugin:@typescript-eslint/recommended",
-    "plugin:@typescript-eslint/recommended-requiring-type-checking",
+    'airbnb-base',
+    'airbnb-typescript/base',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:@typescript-eslint/recommended-requiring-type-checking',
+    'prettier',
   ],
-  parser: "@typescript-eslint/parser",
+  parser: '@typescript-eslint/parser',
   parserOptions: {
-    ecmaVersion: "latest",
-    sourceType: "module",
+    ecmaVersion: 'latest',
+    sourceType: 'module',
     tsconfigRootDir: __dirname,
-    project: ["./tsconfig.json"],
-    extraFileExtensions: [".svelte"],
+    project: ['./tsconfig.json'],
+    extraFileExtensions: ['.svelte'],
   },
-  plugins: ["svelte3", "@typescript-eslint"],
+  plugins: ['svelte3', '@typescript-eslint'],
   rules: {},
   overrides: [
     {
-      files: ["*.svelte"],
-      processor: "svelte3/svelte3",
+      files: ['*.svelte'],
+      processor: 'svelte3/svelte3',
     },
   ],
   settings: {
-    "svelte3/typescript": () => require("typescript"),
+    'svelte3/typescript': () => require('typescript'),
   },
-};
+}
