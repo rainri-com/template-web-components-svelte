@@ -1,6 +1,8 @@
 <script lang="ts">
   import logo from './assets/svelte.png'
   import Counter from './lib/Counter.svelte'
+
+  const test = ''
 </script>
 
 <main>
