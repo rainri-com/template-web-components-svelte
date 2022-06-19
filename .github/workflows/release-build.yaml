@@ -27,6 +27,13 @@ jobs:
       - name: get npm version
         id: package-version
         uses: martinbeentjes/npm-get-version-action@master
-      - uses: release-drafter/release-drafter@v5
+      - name: create release
+        uses: actions/create-release@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: v${{ steps.package-version.outputs.current-version }}
+          release_name: v${{ steps.package-version.outputs.current-version }}
+          body: install the https://www.npmjs.com/package/template-web-components-svelte
+          draft: true
+          prerelease: false

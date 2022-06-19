@@ -1,3 +1,0 @@
-name-template: $TITLE
-tag-template: $TITLE
-template: install the https://www.npmjs.com/package/template-web-components-svelte
