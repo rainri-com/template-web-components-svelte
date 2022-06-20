@@ -24,16 +24,18 @@ jobs:
       - if: steps.publish.outputs.type != 'none'
         run: |
           echo "Version changed: ${{ steps.publish.outputs.old-version }} => ${{ steps.publish.outputs.version }}"
-      - name: get npm version
-        id: package-version
-        uses: martinbeentjes/npm-get-version-action@master
+      - name: get package info
+        if: steps.publish.outputs.type != 'none'
+        id: package
+        uses: codex-team/action-nodejs-package-info@v1
       - name: create release
+        if: steps.publish.outputs.type != 'none'
         uses: actions/create-release@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: v${{ steps.package-version.outputs.current-version }}
-          release_name: v${{ steps.package-version.outputs.current-version }}
-          body: install the https://www.npmjs.com/package/{{ steps.publish.outputs.package }}
+          tag_name: v${{ steps.package.outputs.version }}
+          release_name: v${{ steps.package.outputs.version }}
+          body: install the https://www.npmjs.com/package/${{ steps.package.outputs.name }}
           draft: true
           prerelease: false
